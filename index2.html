@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>폼 (form)</title>
+    </head>
+    <body>
+        <form action="" method="">
+            <label for="jd">아이디: <input type="text" id="jd"></label>
+            <br/><br/><br/>
+            <label>아이디: <input type="text"></label>
+            <br/><br/><br/>
+            <label for="jd">아이디: <input type="text" id="jd"></label>
+            
+            <br/><br/><br/>
+            <fieldset>
+                <legend>기본 정보</legend>
+                <label for="id">아이디: <input type="text" id="id"></label>
+                <br/>
+                <label for="pw">비밀번호: <input type="password" id="pw"></label>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>옵션 정보</legend>
+                <label for="id">가족관계 <input type="text" id="id"></label>
+                <br/>
+                <label for="pw">생년월일 <input type="password" id="pw"></label>
+            </fieldset>
+            <br/><br/><br/>
+
+            <textarea rows="10" cols="20"></textarea>
+            <br/><br/><br/>
+
+            <select multiple> <!-- 한개 이상 선택 가능 (ctrl+m1)(shit+m1)-->
+                <option value="male">남</option>
+                <option value="female">여</option>
+                <option value="genderless">공개 안함</option>
+            </select>
+            <br/><br/><br/>
+            <select size="3">
+                <optgroup label="성별">
+                    <option value="male">남</option>
+                    <option value="female">여</option>
+                    <option value="genderless"selected>공개 안함</option>
+                </optgroup>
+                <!-- <input type="button" value="안녕">-->
+            </select>
+            <br/><br/><br/>
+            <input type="checkbox" checked>
+            <input type="text" readonly>
+            <input type="text" maxlength="2" placeholder="아이디"> <!-- max length는 최대 n 글자까지 적기 그런 느낌 -->
+            <button disabled>안녕</button>
+        </form>
+    </body>
+</html>
