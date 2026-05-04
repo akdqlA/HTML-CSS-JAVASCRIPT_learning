@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <caption>가격표</caption>
+        <col style="width:80px">
+        <colgroup span="2" style="width: 150px"></colgroup>
+        <col style="width: 80px">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>상품명</th>
+                <th>수량</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td>총 금액</td>
+                <td colspan="3">2,500원</td>
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜</td>
+                <td>1개</td>
+                <td>1,500원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2">1,000원</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br>
+    <table border="1">
+        <caption>
+            성적표
+        </caption>
+        <tr>
+            <th scope="col">구분</th> <!-- scope="col"은 자기 아래로 연관 있다는 뜻 -->
+            <th scope="col">중간고사</th>
+            <th scope="col">기말고사</th>
+        </tr>
+        <tr>
+            <th scope="row">전공</th> <!-- scope="row-는 자기 옆으로 연관 있다는 뜻 -->
+            <th>A+</th>
+            <th>B+</th>
+        </tr>
+        <tr>
+            <th scope="row">교양</th>
+            <th>C-</th>
+            <th>B</th>
+        </tr>
+    </table>
+    <br><br><br>
+    <table border="1">
+        <tr>
+            <th scope="col" rowspan="2">구분</th>
+            <th scope="colgroup" colspan="2">1학년</th> <!-- 두개 이상의 열을 지정할 때 colgroup을 씀(아래 방향으로) -->
+        </tr>
+        <tr>
+            <th>중간고사</th>
+            <th>기말고사</th>
+        </tr>
+        <tr>
+            <th scope="rowgroup" rowspan="2">전공</th>
+            <th>A+</th>
+            <th>B+</th>
+        </tr>
+        <tr>
+            <td>C-</td>
+            <td>B</td>
+        </tr>
+    </table>
+</body>
+</html>
