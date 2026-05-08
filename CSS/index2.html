@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div > h1{
+            color: blue
+        }
+
+        .box h1{
+            color: red;
+        }
+        h2 + h4 {
+            color : green
+        }
+        h3 ~ h4 {
+            color : darkorchid
+        }
+        a::after {
+            content: ' =test=';
+        }
+        a::before {
+            content: '=TEST= ';
+        }
+        a:link {
+            color:yellow
+        }
+        a:visited {
+            color:silver
+        }
+        a:hover {
+            color:black
+        }
+        a:active {
+            color:darkgoldenrod
+        }
+        input:focus {
+            color:purple
+        }
+        input:checked + label{
+            color:lightseagreen
+        }
+        button:disabled{
+            background-color:aquamarine
+        }
+        button:active{
+            background-color: black;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="A">href</a>
+    <br>
+    <a href="##">yellow_if_click</a>
+    <h1 class="red blue">h1 tag</h1>
+    <p class="red">p tag</p>
+
+    <div class="box">
+        <h1>h1 tag - 1</h1>
+        <div>
+            <h1>h1 tag - 2</h1>
+        </div>
+    </div>
+        <h1>h1 tag</h1>
+
+    <dl>
+        <dt>CSS</dt>
+        <dd>CSS는 Cascading Style Sheets의 약자입니다.</dd>
+    </dl>
+    <h2>h2 tag</h2>
+    <h4>h4 tag</h4>
+    <h4>h4 tag</h4>
+    <h3>h3 tag</h3>
+    <h4>h4 tag</h4>
+    <h4>h4 tag</h4>
+    <br><br>
+    <input type="text">
+    <br><br>
+    <input type="checkbox" checked>
+    <label>성별</label>
+    <br><br>
+    <button disabled> 버튼</button>
+    <br><br>
+    <button>버튼</button>
+</body>
+</html>
