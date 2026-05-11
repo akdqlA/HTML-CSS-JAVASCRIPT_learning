@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-family: dotum, serif, fantasy;/*돋움으로 하고 사용자가 없으면 그 다음 serif 그것도 없으면 그다음 느낌*/
+        }
+        h2{
+            font-weight:100;/*최소 100 최대 900 폰트마다 최소 최대 크기가 다를 수 있음*/
+        }
+        h3{/*normal,italic,oblique로 있고 다 기울임 폰트인 듯*/
+            font-style:oblique;
+        }
+        h4{/*normal과small-caps가 있으며 작은 대문자로 바꾼다.*/
+            font-variant:small-caps;
+        }
+        h5{/*텍스트 정렬임 속성은 알아서 찾기 아마도 text-align:만 치면 그다음 여러개 나올꺼임*/
+            text-align:right;
+        }
+        h6{/*보이듯이 글자마다의 공간임*/
+            letter-spacing:32px;
+        }
+        #H1{
+            line-height:5;/*현재 font-size의 5배라는 뜻,%나 px도 되긴 함*/
+        }
+    </style>
+</head>
+<body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
+    <h6>it's h6</h6>
+    <h1 id="H1">h1</h1>
+    <h1 id="H2">h1</h1>
+    <h1 id="H3">h1</h1>
+    <h1 id="H4">h1</h1>
+    <h1 id="H5">h1</h1>
+    <h1 id="H6">h1</h1>
+</body>
+</html>
