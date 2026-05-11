@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box .inner p {/*점수 21점*/
+            color:blueviolet
+        }
+        .inner p {/*점수 11점*/
+            color: blue
+        }
+
+        /*p{점수 1점
+            color:red
+        }*/
+
+        html {
+            font-size:16;/*html의 폰트 사이즈는 16이며 rem같은 경우에는 1rem당 16이다. em도 같음*/
+        }
+
+        #p1{
+            font-size:32px;
+        }
+
+        #p2{
+            font-size:200%;
+        }
+
+        #p3{/*부모 요소의 텍스트 크기에 상대적인 크기를 가진다.만약 부모가 32 px일때 2em 이면 64 px가 되는 느낌*/
+            font-size:3em;
+        }
+
+        #p4{/*html의 텍스트 크기에 비례해서 커진다.*/
+            font-size:3rem;
+        }
+
+        #p5{/*기준 뷰포트 너비에 비례해서 크기가 달라짐*/
+            font-size:14vw;
+        }
+
+        #p6{/*기준 뷰포트 높이에 비례해서 크기가 달라짐*/
+            font-size:14vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="inner">
+            <p>p tag1</p>
+        </div>
+    </div>
+    <p>p tag2</p>
+    <p id="p1">p1</p>
+    <p id="p2">p2</p>
+    <p id="p3">p3</p>
+    <p id="p4">p4</p>
+    <p id="p5">p5</p>
+    <p id="p6">p6</p>
+</body>
+</html>
