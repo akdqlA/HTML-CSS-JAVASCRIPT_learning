@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {/*크롬 개발 도구 찾아서 열어 보기*/
+            margin-bottom:20px;
+        }
+        .second {/*위에꺼 아래꺼 합쳐서 50 같아 보이지만 겹쳐서 총 위와 아래의 간격은 30 이걸 margin 겹침 현상이라고 한데*/
+            margin-top:30px;
+        }
+        .third {/*위와 아래도 오른쪽과 왼쪽처럼 100으로 개발 도구에 나오지만 실제론 왼쪽과 오른쪽에만 영향을 끼친다*/
+            margin: 100px
+        }
+        .fourth {/*boarder는 테두리이며 처음 숫자는 굵기,두번째는 굵기 종류,세번째는 굵기 색이다.*/
+            border: 1px solid red;
+            padding:30px
+        }
+        .fifth{/*block은 p,hn,div 태그처럼 너비가 콘텐츠 유무와 상관 없이 항상 한줄 차지
+            inline은 요소의 너비를 콘텐츠 크기만큼만 차지
+            inline-block은 inline처럼 너비가 콘텐츠 크기만큼 차지하지마 그 외의 성격은 블록 성격을 가지는 복합적 성격,(이해가 잘 안 가긴 하는 img 태그를 사용할 때 웹 브라우저의 수평 공간이 남아 있으면 한 줄로 배치된다는 설명이 있음)*/
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <P class="first">first</P>
+    <p class="second">second</p>
+    <span class="third">third</span>
+    <p class="fourth">fourth</p>
+    <p class="fifth">five</p>
+    <p class="six">six</p>
+</body>
+</html>
