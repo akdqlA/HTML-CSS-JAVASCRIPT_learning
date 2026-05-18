@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin:0;
+            height:4000px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            float:top;/*정렬인데 왼쪽으로 정렬하면 예상했던 것 보단 안 좋은 결과가 나옴*/
+        }
+        .red {/*position:static은 기본 상태*/
+            background-color: red;/*그냥 이동*/
+            position:relative;
+            left:100px;
+        }
+        .green {/*absolute 값일 때는 요소를 안 움직이면 요소가 원래 있던 공간은 빈 공간으로 인식해서 지금 2번째에
+            있어야 할 파랑이 위가 빈 판정인지라 올라간 모습*/
+            background-color: green;
+            position:absolute;
+            left:208px;
+        }
+        .blue {
+            position:fixed;/*마찬가지로 left,right,top,bottom가능. 기능은 스크롤해도 고정*/
+            background-color: blue;
+        }
+        .purple {
+            background-color:darkorchid;/*스크롤하다가 탑이 n이 될 때 그 위에 붙어서 fixed와 똑같이 고정됌*/
+            position:sticky;
+            top:0;/*왠지 모르겠는데 0밖에 안 됌*/
+            /*z-index: 10;/*알아서 찾아보기*/
+        }
+        .idk {
+            color:white;
+        }
+        .Blue {/*정렬임*/
+            background-color:red;
+            float:left;
+        }
+        .Red {
+            background-color:blue;
+            float:left;
+        }
+        .container{
+            width:500px;
+            height:250px;
+            margin:0auto;
+            border:1px solid black;
+            background:silver;
+            overflow:auto;
+        }
+        .A {
+            background-color:black;
+            float:left;
+        }
+        .B {
+            background-color:white;
+            float:left;
+        }/*clear라는 것도 있는데 아마 정렬 대상에서 제외하는 느낌인 듯*/
+    </style>
+</head>
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+    <div class="box purple"></div>
+    <div class="idk Red">Red</div>
+    <div class="idk Blue">Box</div>
+    <div class="container">
+        <div class="box A"></div>
+        <div class="box B"></div>
+    </div>
+</body>
+</html>
