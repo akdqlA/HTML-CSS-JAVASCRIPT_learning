@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            animation-name: bgChange;
+            animation-duration:5s;
+            animation-delay: 1s;
+            animation-fill-mode: both;/*none,forwards,backwards,both 방식이 있고 대충 시작전에 그 색인지 끝나고 0%의 색인지 느낌*/
+            animation-iteration-count: infinite;/*애니메이션 반복 횟수*/
+            animation-play-state:; /*paused,running가능*/
+            animation-direction:alternate;/*normal,reverse,alternate,alternate-reverse가 있음*/
+            /*또 animation: <name> 이후 한번에 지정 가능*/
+        }
+
+        @keyframes bgChange {
+            0%{/*from,to로도 가능*/
+                background-color: blue;
+            }
+            25%{
+                background-color:red;
+            }
+            50%{
+                background-color: green;
+            }
+            75%{
+                background-color: blue;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
