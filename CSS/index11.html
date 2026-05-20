@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color:red;
+            /*transform: translateX(100px);Y도 가능 혹은 trasnlate(x,y)도 가능*/
+            /*transform:scale(5);똑같이 scale과 scaleX이런 것도 가능*/
+            /*skew도 있긴 함 값은 deg임 *ex transform: skew(30deg,50deg)*/
+            /*rotate도 있음 transform:rotate(n deg); X,Y도 있음
+            또 transform-origin으로 회전축을 바꿀 수 있음(left,right,top,bottom)*/
+            position:absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);/*이 박스 중심축이 왼쪽 위 모서리에 있어서 예를 들어서
+            tranlate로 왼쪽으로 자기 크기의 50%만큼 간다는 그런 의미*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
