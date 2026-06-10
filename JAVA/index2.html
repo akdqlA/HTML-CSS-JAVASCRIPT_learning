@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width:5000px;
+            height:5000px;
+        }
+        div{
+            position:fixed;
+            top:10px;
+            left:10px;
+        }
+    </style>
+</head>
+<button>
+    <button onclick="printInfo()">Window 객체 속성</button>
+    <button onclick="popup()">팝업</button>
+    <button onclick="sTo()">scrollTo(200,300)</button>
+    <button onclick="sBy()">scrollBy(200,300)</button>
+    <script>
+        function printInfo()
+        {
+            console.log(`브라우저의 너비(innderWidth): ${window.innerWidth}`);
+            console.log(`브라우저의 높이(innderHeight): ${window.innerHeight}`);
+            console.log(`브라우저의 창의 너비(innderouterWidth): ${window.outerWidth}`);
+            console.log(`브라우저의 창의 높이(innderouterHeight): ${window.outerHeight}`);
+            console.log(`브라우저 창 위쪽 면과 모니터 사이의 간격: ${window.screenTop}\${window.screenY}`);
+            console.log(`브라우저 창 왼쪽 면과 모니터 사이의 간격: ${window.screenTop}\${window.screenX}`);
+            console.log(`웹 브라우저 창의 스크롤 가로 위치: ${window.scrollX}`);
+            console.log(`웹 브라우저 창의 스크롤 세로 위치: ${window.scrollY}`);
+        }
+        function popup(){
+            window.open('popup.html','팝업','width=200,height=100');
+        }
+        function sTo(){
+            window.scrollTo(200,300);
+        }
+        function sBy(){
+            window.scrollBy(200,300);
+        }
+    </script>
+</body>
+</html>
