@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="f1">
+        <input type="text">
+    </form>
+    <form name="f2">
+        <input type="text">
+    </form>
+    <form name="f3">
+        <input type="text">
+    </form>
+    
+    <form name="f4">
+        <label for="uname">이름</label>
+        <input type="text" id="uname" name="uname" value="유현우">
+        <label for="age">나이</label>
+        <input type="text" id="age" name="age" value="18">
+        <label for="age">비밀번호</label>
+        <input type="password" id="pw" name="pw">
+        <label for="gender">성별</label>
+        <select name="gender" id="gender">
+            <option value="male">male</option>
+            <option value="female">female</option>
+        </select>
+        <textarea name="txtarea" id="txtarea" cols="30" rows="10"></textarea>
+        <button type="submit" name="btn">전송</button>
+    </form>
+
+    <form name="f5">
+        <label><input type="checkbox" value="apple">사과</label>
+        <label><input type="checkbox" value="banana" checked> 바나나</label>
+        <label><input type="checkbox" value="orange">오렌지</label>
+        <label><input type="checkbox" value="melon" checked>멜론</label>
+    </form>
+
+    <form name="f6">
+        <label><input type="radio" value="apple" name="fruits" checked>사과</label>
+        <label><input type="radio" value="banana" name="fruits"> 바나나</label>
+        <label><input type="radio" value="orange" name="fruits">오렌지</label>
+        <label><input type="radio" value="melon"  name="fruits">멜론</label>
+    </form>
+
+    <form name="f7">
+        <select>
+            <option value="apple" name="fruits">사과</option>
+            <option value="banana" name="fruits">바나나</option>
+            <option value="orange" name="fruits">오렌지</option>
+            <option value="melon" name="fruits">멜론</option>
+        </select>
+    </form>
+    <form name="f8">
+        <input type="file" name="upload">
+    </form>
+    <script>//ex document.f8.upload.files[0].size
+        const formEls1 = document.f1;
+        const formEls = document.forms;//[]느낌으로도 가능함
+        const f4 = document.f4;
+        const cb = document.querySelectorAll("input[type='checkbox']");
+        const rb = document.querySelectorAll("input[type='radio']");
+        //const sb = document.f7.elements[0].children; 이렇게 하면 forEach로 못 함 Prototype을 개발자 도구에서 보면 없음
+        const sb = document.querySelectorAll("option[name='fruits']");
+        console.log(sb);
+        console.log(sb);
+        cb.forEach((el)=>{//라디오도 비슷한 형식으로 가능함 전체를 체크는 못 하겠지만
+            el.checked = true;
+        })
+        console.log(f4.elements)//[] 형식으로 가능하며 label은 제외되어 있음 혹은 elements.name도 가능(name은 예를 들어 btn)
+        console.log(f4.elements.uname.value);//자동 완성이 안 되지만 정상적으로 작동함
+        //혹은 이렇게 가능함
+        const sb1 = document.f7.elements[0].children;
+        Array.prototype.forEach.call(sb1,function(el){
+            console.log(el);
+        })
+    </script>
+</body>
+</html>
