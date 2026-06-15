@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>text</h1>
+    <p>a</p>
+    <p>a</p>
+    <p>a</p>
+    <p>a</p>
+    <p>a</p>
+    <p>a</p>
+    <p>a</p>
+    <script>//대강 흐름상 a 노드 만들고 텍스트와 링크 노드 만들고 링크 값 넣고 a의 링크 노드에 넣고 a의 자식 노드로 
+    //텍스트를 추가하고 document.body에 자식으로 지정해서 보이게 함 이후 삭제도 가능함
+        const aEl = document.createElement("a");
+        const textNode = document.createTextNode("링크");
+        const hrefAttr = document.createAttribute("href");
+        
+        hrefAttr.value = 'https://www.gitbut.co.kr';
+        aEl.setAttributeNode(hrefAttr);
+        aEl.appendChild(textNode);
+        document.body.appendChild(aEl);
+        document.body.removeChild(aEl); //되긴 함 아래는 노드 찾아서 없애는 거
+        const hEl = document.querySelector("h1");
+        hEl.parentNode.removeChild(hEl);
+
+        const pEl = document.querySelectorAll("p");
+        pEl.forEach((el) =>{
+            el.parentNode.removeChild(el);
+        })//이런 느낌도 가능
+
+        //const childNodes = document.body.childNodes;
+        //childNodes.forEach((node)=>{
+        //  if(node.nodeName == 'p'){
+            //  node.parentNode.removeChild(node)}});
+    </script>
+</body>
+</html>
