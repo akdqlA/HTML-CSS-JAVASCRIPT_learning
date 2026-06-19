@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="keyEvent()" value="아무 키나 여기에 입력하기">
+    <input type="text" onmouseover="focusEvent()" value="마우스 갖다되면 경고 뜸">
+    <button onclick="clickEvent()">클릭</button>
+    <button ondblclick="dbclickEvent()">더블 클릭</button>
+    <button>버어트은</button>
+    <input type="text" value="스크립트 함수 예시용">
+    <button name="이름은 버튼이라던데">ㅂㅓㅌㅡㄴ</button>
+    <script>
+        const btn1 = document.querySelectorAll("button")[2];
+        const inp1 = document.querySelectorAll("input")[2];
+        const btn2 = document.querySelectorAll("button")[3];
+        function clickEvent(){
+            alert("click!");
+        }
+        function dbclickEvent(){
+            alert("double click!");
+        }
+        function keyEvent(){
+            alert("key click!");
+        }
+        function focusEvent(){
+            alert("focus click!");
+            console.log(btnEl);
+        }
+        btn1.onclick = function(){
+            alert('버어 트은 clicked.');
+        }
+        inp1.onclick = ClickEvent;
+        function ClickEvent(){
+            alert("messeage?: anything that i want i guess.");
+        }
+        btn2.addEventListener("click",()=>{ alert(`${btn2.name}`); });//여기에는 만약 앞에 on이 있는 onclick같은 것들은 on을 빼기
+        //추가로 저 ()=>는 function(){}로 대체 가능
+        const KeyDownEvent = () =>{
+            alert('mmmmmmmmmmm');
+        }
+        inp1.addEventListener("keydown", KeyDownEvent);
+    </script>
+</body>
+</html>
