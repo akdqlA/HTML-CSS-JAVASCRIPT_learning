@@ -18,10 +18,10 @@
                 e.preventDefault();
             })
         });
-        const p = document.querySelectorAll('p');
+        const p = document.querySelectorAll("p");
         p.forEach((el)=>{
-            el.addEventListener("click",(e) =>{
-                console.log(e.target);//this 혹은 e.target 느낌으로 여러개의 엘리맨탈 중 골라진 것을 고를 수 있음
+            el.addEventListener("click",function(){
+                console.log(this);//this 혹은 e.target 느낌으로 여러개의 엘리맨탈 중 골라진 것을 고를 수 있음
             })
         })
     </script>
